@@ -1,0 +1,128 @@
+@import url('vars.css');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 320px;
+  font-family: 'Arial', sans-serif;
+}
+
+.list-reset {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input, select {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.main {
+  padding: 50px 0;
+}
+
+.main__title {
+  display: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 360px;
+}
+
+.main__box {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* .main__input {
+  width: 100%;
+  padding: 10px 8px;
+  border-bottom: 1px solid #333;
+} */
+
+.main__input-point {
+  margin-bottom: 20px;
+}
+
+.main__ticets {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* .main__btn {
+  padding: 15px 10px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.main__btn:hover {
+  border-color: transparent;
+  background-color: rgba(51, 51, 51, .5);
+}
+
+.main__btn:focus-visible {
+  outline: none;
+  border-color: transparent;
+  background-color: rgba(51, 51, 51, .5);
+}
+
+.main__btn:active {
+  border-color: transparent;
+  background-color: rgba(51, 51, 51, .2);
+} */
+
+.main__input-time:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.is-close {
+  display: none;
+}
