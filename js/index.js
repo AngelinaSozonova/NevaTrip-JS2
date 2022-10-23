@@ -84,9 +84,8 @@ window.addEventListener('DOMContentLoaded', () => {
         
         let ms = endDate - startDate,
             time = (ms / 60000).toString().substring(0, 4);
-
-        let hours = Math.trunc(time / 60);
-        let minutes = time % 60;
+            hours = Math.trunc(time / 60);
+            minutes = time % 60;
 
         if (hours == 0) {
             return `${minutes} мин.`;
@@ -138,13 +137,13 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelector('.main__btn').addEventListener('click', () => {
-        let ticketQuantity = document.getElementById('num').value.trim();
-        let point = selectRoute.value;
-        let sum = getSum();
-        let timeTrevel = '50 мнин';
-        let start = parseTime(selectTime.value);
-        let end = parseTime(selectReverseTime.value);
-        let endTimeTravel;
+        let ticketQuantity = document.getElementById('num').value.trim(),
+            point = selectRoute.value,
+            sum = getSum(),
+            timeTrevel = '50 мнин',
+            start = parseTime(selectTime.value),
+            end = parseTime(selectReverseTime.value),
+            endTimeTravel;
 
         if (selectRoute.value === "из A в B и обратно в А") {
             timeTrevel = getTimeTrevel(start, end);
