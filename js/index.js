@@ -83,15 +83,14 @@ window.addEventListener('DOMContentLoaded', () => {
         }
         
         let ms = endDate - startDate,
-            time = (ms / 3600000).toString().substring(0, 4),
-            arrTime = time.split('.'),
-            res = '';
-        
-        for (let i=0; i < arrTime.length - 1; i++) {
-            res = res.concat(`${arrTime[0]} час(a) ${arrTime[1]} минут(ы)`) ;
-        }
-       
-        return res;
+            time = (ms / 60000).toString().substring(0, 4);
+
+        let hours = Math.trunc(time / 60);
+        let minutes = time % 60;
+
+        if (hours == 0) {
+            return `${minutes} мин.`;
+        } else return (`${hours} ч. ${minutes} мин.`);
     }
 
     //добавить минуты к дате
